@@ -60,7 +60,7 @@ public class Main {
 
 
   // The time complexity is:
-  // YOUR ANSWER HERE
+  // O(N) -> simplified to n due to for loop complexity
   public static int computeFactorial(int n) {
     int result = 1;
     for(int i = 1; i <= n; i++) {
