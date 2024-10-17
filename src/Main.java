@@ -93,7 +93,7 @@ public class Main {
 
   // assume n = wordsA.length = wordsB.length
   // The time complexity is:
-  // YOUR ANSWER HERE
+  // O(N^2) -> n*n = n^2
   public static boolean containsOverlap(String[] wordsA, String[] wordsB) {
     for(String wordA : wordsA) {
         for(String wordB : wordsB) {
