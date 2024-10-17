@@ -136,7 +136,7 @@ public class Main {
     return (a + b) / 2.0;
   }
   // The time complexity is:
-  // YOUR ANSWER HERE
+  // O(1) -> simplifies 
   public static void checkIfContainedHashSet(HashSet<String> set, String target)
   {
     if (set.contains(target)) {
