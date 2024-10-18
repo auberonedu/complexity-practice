@@ -166,9 +166,9 @@ public class Main {
   // keys are names and the values are emails.
   // Write this method to efficiently return the corresponding email or "Person not found" if appropriate
   // What is the time complexity of your solution?
-  // YOUR ANSWER HERE
+  // O(1) -> average case for HashMap
   public static String emailLookupEfficient(HashMap<String, String> namesToEmails, String queryName) {
-    return null;
+    return namesToEmails.getOrDefault(queryName, "Person not found");
   }
 
   // What is the time complexity of this method?
