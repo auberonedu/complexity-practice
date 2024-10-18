@@ -200,7 +200,8 @@ public class Main {
   // The prices will be updated frequently throughout the day, and you need to efficiently update
   // and access the current price for each stock. The order of the ticker symbols is not important.
   // What would be a good choice of data structure?
-  // YOUR ANSWER HERE
+  // I would use a HashMap since it's efficient for frequent updates and provides an easy lookups using stock's ticket symbol as the key. 
+  // The average complexity time for HashMap is O(1), so it's fast. 
 
   // Suppose you are building a music player application where users can create playlists.
   // Songs can be added to the end of the playlist in the order the user chooses, and the user can
