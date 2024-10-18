@@ -6,7 +6,7 @@ import java.util.Set;
 public class Main {
 
   // The time complexity is:
-  // YOUR ANSWER HERE
+  // O(n^2)
   public static void timesTable(int x) {
     for(int i = 1; i <= x; i++) {
         for(int j = 1; j <= x; j++) {
@@ -17,7 +17,7 @@ public class Main {
   }
 
   // The time complexity is:
-  // YOUR ANSWER HERE
+  // O(n), where n = length of word
   public static void printLetters(String word) {
     char[] letters = word.toCharArray();
 
@@ -27,7 +27,7 @@ public class Main {
   }
 
   // The time complexity is:
-  // YOUR ANSWER HERE
+  // O(1)
   public static boolean isBanned(String password) {
     String[] bannedPasswords = {"password", "hello", "qwerty"};
     boolean banned = false;
@@ -41,7 +41,7 @@ public class Main {
 
 
   // The time complexity is:
-  // YOUR ANSWER HERE
+  // O(n)
   public static int computeProduct(int[] nums) {
     int total = 1;
     for(int num : nums) {
@@ -51,7 +51,7 @@ public class Main {
   }
 
   // The time complexity is:
-  // YOUR ANSWER HERE
+  // O(1)
   public static void describeProduct(int[] nums) {
     System.out.println("About to compute the product of the array...");
     int product = computeProduct(nums);
@@ -60,7 +60,7 @@ public class Main {
 
 
   // The time complexity is:
-  // YOUR ANSWER HERE
+  // O(n)
   public static int computeFactorial(int n) {
     int result = 1;
     for(int i = 1; i <= n; i++) {
@@ -71,16 +71,17 @@ public class Main {
 
   // Assume that the largest number is no bigger than the length
   // of the array
+  // O(n^2)
   public static void computeAllFactorials(int[] nums) {
-    for(int num : nums) {
-        int result = computeFactorial(num);
+    for(int num : nums) { // O(n)
+        int result = computeFactorial(num); // O(n)
         System.out.println("The factorial of " + num + " is " + result);
     }
   }
 
 
   // The time complexity is:
-  // YOUR ANSWER HERE
+  // O(n)
   public static void checkIfContainedArrayList(ArrayList<String> arr, String target) {
     if (arr.contains(target)) {
         System.out.println(target + " is present in the list");
@@ -92,7 +93,7 @@ public class Main {
 
   // assume n = wordsA.length = wordsB.length
   // The time complexity is:
-  // YOUR ANSWER HERE
+  // O(n^2)
   public static boolean containsOverlap(String[] wordsA, String[] wordsB) {
     for(String wordA : wordsA) {
         for(String wordB : wordsB) {
@@ -105,7 +106,7 @@ public class Main {
   }
 
   // The time complexity is:
-  // YOUR ANSWER HERE
+  // O(n)
   public static boolean containsOverlap2(String[] wordsA, String[] wordsB) {
     Set<String> wordsSet = new HashSet<>();
     for(String word : wordsA) {
@@ -122,7 +123,7 @@ public class Main {
   }
 
   // The time complexity is:
-  // YOUR ANSWER HERE
+  // O(n), where n = chars.length
   public static void printCharacters(char[] chars) {
     for (int i = 0; i < chars.length; i++) {
       char character = chars[i];
@@ -130,12 +131,12 @@ public class Main {
     }
   }
   // The time complexity is:
-  // YOUR ANSWER HERE
+  // O(1)
   public static double computeAverage(double a, double b) {
     return (a + b) / 2.0;
   }
   // The time complexity is:
-  // YOUR ANSWER HERE
+  // O(n)
   public static void checkIfContainedHashSet(HashSet<String> set, String target)
   {
     if (set.contains(target)) {
@@ -150,7 +151,7 @@ public class Main {
   // A queryName is given, and this method returns the corresponding email if it is found
   // Otherwise, it returns "Person not found"
   // What is the time complexity of this method?
-  // YOUR ANSWER HERE
+  // O(n), where n = names.length
   public static String emailLookup(String[] names, String[] emails, String queryName) {
     for(int i = 0; i < names.length; i++) {
       if (names[i].equals(queryName)) {
@@ -165,17 +166,21 @@ public class Main {
   // keys are names and the values are emails.
   // Write this method to efficiently return the corresponding email or "Person not found" if appropriate
   // What is the time complexity of your solution?
-  // YOUR ANSWER HERE
+  // O(1)
   public static String emailLookupEfficient(HashMap<String, String> namesToEmails, String queryName) {
-    return null;
+    String response = namesToEmails.get(queryName);
+    if (response == null) {
+      response = "Person not found";
+    }
+    return response;
   }
 
   // What is the time complexity of this method?
   // (assume the set and list have the same number of elements)
-  // YOUR ANSWER HERE
+  // O(n^2)
   public static boolean hasCommon(HashSet<String> wordSet, ArrayList<String> wordList) {
-    for(String word : wordSet) {
-      if(wordList.contains(word)) {
+    for(String word : wordSet) { // O(n)
+      if(wordList.contains(word)) { // O(n)
         return true;
       }
     }
@@ -184,8 +189,13 @@ public class Main {
   // Rewrite hasCommon so it does the same thing as hasCommon, but with a better time complexity.
   // Do not change the datatype of wordSet or wordList.
   // What is the time complexity of your new solution?
-  // YOUR ANSWER HERE
+  // O(n)
   public static boolean hasCommonEfficient(HashSet<String> wordSet, ArrayList<String> wordList) {
+    for(String item : wordList) {
+      if(wordSet.contains(item)) {
+        return true;
+      }
+    }
     return false;
   }
 
@@ -194,14 +204,14 @@ public class Main {
   // The prices will be updated frequently throughout the day, and you need to efficiently update
   // and access the current price for each stock. The order of the ticker symbols is not important.
   // What would be a good choice of data structure?
-  // YOUR ANSWER HERE
+  // HashMap, because: store in value-key pairs, order doesn't matter, very quick access.
 
   // Suppose you are building a music player application where users can create playlists.
   // Songs can be added to the end of the playlist in the order the user chooses, and the user can
   // skip to the next or previous song. Most operations involve adding songs and accessing them by
   // their position in the playlist.
   // What would be a good choice of data structure?
-  // YOUR ANSWER HERE
+  // ArrayList, because: quick access to indices, ordered. (Maybe TreeSet, if guaranteed no duplicates)
 
   // Suppose you are developing a search feature that keeps track of the user's
   // recent search queries. You want to store the queries in the order they were made,
@@ -209,5 +219,5 @@ public class Main {
   // relatively small, and it is more important to preserve the order of the searches than
   // to optimize for fast lookups or deletions.
   // What would be a good choice of data structure?
-  // YOUR ANSWER HERE
+  // ArrayList, because: retains order, allows duplicates.
 }
