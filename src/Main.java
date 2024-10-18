@@ -217,5 +217,6 @@ public class Main {
   // relatively small, and it is more important to preserve the order of the searches than
   // to optimize for fast lookups or deletions.
   // What would be a good choice of data structure?
-  // YOUR ANSWER HERE
+  // I would use a LinkedList because it has an order of insertion, which is significant in this situation. 
+  // It allows to insert new queries at the end of the list, while maintaining the order.
 }
