@@ -185,7 +185,7 @@ public class Main {
   // Rewrite hasCommon so it does the same thing as hasCommon, but with a better time complexity.
   // Do not change the datatype of wordSet or wordList.
   // What is the time complexity of your new solution?
-  // YOUR ANSWER HERE
+  // O(N) -> flipped the order of the ArrayList and HashSet to improve time complexity
   public static boolean hasCommonEfficient(HashSet<String> wordSet, ArrayList<String> wordList) {
     for (String word: wordList) {
       if(wordSet.contains(word)) {
