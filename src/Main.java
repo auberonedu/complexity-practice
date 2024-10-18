@@ -151,7 +151,7 @@ public class Main {
   // A queryName is given, and this method returns the corresponding email if it is found
   // Otherwise, it returns "Person not found"
   // What is the time complexity of this method?
-  // YOUR ANSWER HERE
+  // O(N) -> n = length of the names array
   public static String emailLookup(String[] names, String[] emails, String queryName) {
     for(int i = 0; i < names.length; i++) {
       if (names[i].equals(queryName)) {
