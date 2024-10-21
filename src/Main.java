@@ -151,7 +151,7 @@ public class Main {
   // A queryName is given, and this method returns the corresponding email if it is found
   // Otherwise, it returns "Person not found"
   // What is the time complexity of this method?
-  // YOUR ANSWER HERE
+  // 0(n) where n is the length of the names array
   public static String emailLookup(String[] names, String[] emails, String queryName) {
     for(int i = 0; i < names.length; i++) {
       if (names[i].equals(queryName)) {
@@ -166,14 +166,14 @@ public class Main {
   // keys are names and the values are emails.
   // Write this method to efficiently return the corresponding email or "Person not found" if appropriate
   // What is the time complexity of your solution?
-  // YOUR ANSWER HERE
+  // 0(1) since HashMap operations get are 0(1) on average
   public static String emailLookupEfficient(HashMap<String, String> namesToEmails, String queryName) {
     return null;
   }
 
   // What is the time complexity of this method?
   // (assume the set and list have the same number of elements)
-  // YOUR ANSWER HERE
+  // 0(n * m) where n is the size of the set and m is the size of the list
   public static boolean hasCommon(HashSet<String> wordSet, ArrayList<String> wordList) {
     for(String word : wordSet) {
       if(wordList.contains(word)) {
@@ -185,7 +185,7 @@ public class Main {
   // Rewrite hasCommon so it does the same thing as hasCommon, but with a better time complexity.
   // Do not change the datatype of wordSet or wordList.
   // What is the time complexity of your new solution?
-  // YOUR ANSWER HERE
+  // 0(n + m), where n is the size of the set and m is the size of the size of the list
   public static boolean hasCommonEfficient(HashSet<String> wordSet, ArrayList<String> wordList) {
     return false;
   }
