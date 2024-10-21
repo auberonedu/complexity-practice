@@ -123,7 +123,7 @@ public class Main {
   }
 
   // The time complexity is:
-  // YOUR ANSWER HERE
+  // 0(n) where n is the length of the chars array
   public static void printCharacters(char[] chars) {
     for (int i = 0; i < chars.length; i++) {
       char character = chars[i];
@@ -131,12 +131,12 @@ public class Main {
     }
   }
   // The time complexity is:
-  // YOUR ANSWER HERE
+  // 0(1) since only two variables are involved
   public static double computeAverage(double a, double b) {
     return (a + b) / 2.0;
   }
   // The time complexity is:
-  // YOUR ANSWER HERE
+  // 0(1) since HashSet operations (contains) are 0(1) on average
   public static void checkIfContainedHashSet(HashSet<String> set, String target)
   {
     if (set.contains(target)) {
