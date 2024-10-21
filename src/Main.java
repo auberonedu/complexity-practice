@@ -195,14 +195,16 @@ public class Main {
   // The prices will be updated frequently throughout the day, and you need to efficiently update
   // and access the current price for each stock. The order of the ticker symbols is not important.
   // What would be a good choice of data structure?
-  // YOUR ANSWER HERE
+  // A good choice of data structure for stock prices would be: HashMap<String, Double>
+  // HashMap allows for efficient update and lookups (0)1) on average.
 
   // Suppose you are building a music player application where users can create playlists.
   // Songs can be added to the end of the playlist in the order the user chooses, and the user can
   // skip to the next or previous song. Most operations involve adding songs and accessing them by
   // their position in the playlist.
   // What would be a good choice of data structure?
-  // YOUR ANSWER HERE
+  // A good choice of data structure for playlists would be: LinkedList<String>
+  // LinkedList allows for efficient insertion at the end and traversal (0)1) insertion, 0(n) access).
 
   // Suppose you are developing a search feature that keeps track of the user's
   // recent search queries. You want to store the queries in the order they were made,
@@ -210,5 +212,6 @@ public class Main {
   // relatively small, and it is more important to preserve the order of the searches than
   // to optimize for fast lookups or deletions.
   // What would be a good choice of data structure?
-  // YOUR ANSWER HERE
+  // A good choice of data structure for recent search queries would be: ArrayList<String>
+  // ArrayList allows for fast iteration and maintains order of insertion.
 }
